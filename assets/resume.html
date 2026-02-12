@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinay Kumar - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            font-size: 20px;
+            color: #666;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        h3 {
+            font-size: 20px;
+            color: #667eea;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 5px;
+        }
+        
+        .summary {
+            text-align: justify;
+            line-height: 1.8;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .skill-category h4 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tags span {
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 13px;
+            border: 1px solid #ddd;
+        }
+        
+        .project, .cert-item {
+            margin-bottom: 20px;
+        }
+        
+        .project h4, .cert-item h4 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .project-date, .cert-date {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        
+        .project p, .cert-item p {
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 5px;
+        }
+        
+        .tech-stack span {
+            background: #667eea;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>VINAY KUMAR PASUPULETI</h1>
+        <h2>Full Stack Developer</h2>
+        <div class="contact-info">
+            <span>📧 vinaykumarpasupuleti1234@gmail.com</span>
+            <span>📱 +91 9398712651</span>
+            <span>📍 India</span>
+        </div>
+    </div>
+
+    <section>
+        <h3>PROFESSIONAL SUMMARY</h3>
+        <p class="summary">
+            Motivated and detail-oriented Full Stack Developer with a strong foundation in modern web technologies. 
+            Proficient in building responsive, scalable, and user-friendly applications using React.js, Node.js, Python, 
+            and various database systems. Demonstrated ability to develop end-to-end solutions from concept to deployment. 
+            Strong problem-solving skills with expertise in data structures and algorithms. Passionate about writing clean, 
+            maintainable code and continuously learning new technologies to deliver exceptional user experiences.
+        </p>
+    </section>
+
+    <section>
+        <h3>TECHNICAL SKILLS</h3>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Frontend Development</h4>
+                <div class="skill-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>React.js</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Backend Development</h4>
+                <div class="skill-tags">
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>FastAPI</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Database Management</h4>
+                <div class="skill-tags">
+                    <span>MongoDB</span>
+                    <span>PostgreSQL</span>
+                    <span>MySQL</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Tools & Technologies</h4>
+                <div class="skill-tags">
+                    <span>Git</span>
+                    <span>Docker</span>
+                    <span>JWT/OAuth</span>
+                    <span>REST APIs</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Programming Languages</h4>
+                <div class="skill-tags">
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                    <span>C</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Computer Science</h4>
+                <div class="skill-tags">
+                    <span>Data Structures</span>
+                    <span>Algorithms</span>
+                    <span>System Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>PROJECTS</h3>
+        
+        <div class="project">
+            <h4>Full Stack E-Commerce Platform</h4>
+            <p class="project-date">Personal Project</p>
+            <p>
+                Developed a comprehensive e-commerce solution with complete user authentication, product management, 
+                shopping cart functionality, and secure payment integration. Implemented real-time inventory updates 
+                and order tracking system.
+            </p>
+            <div class="tech-stack">
+                <span>React.js</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>Express.js</span>
+                <span>JWT Authentication</span>
+            </div>
+        </div>
+
+        <div class="project">
+            <h4>Loan Eligibility & EMI Calculator</h4>
+            <p class="project-date">Personal Project</p>
+            <p>
+                Built a smart financial tool that calculates loan eligibility based on income, credit score, and expenses. 
+                Features include EMI calculation, amortization schedule generation, and comparative loan analysis tools 
+                with interactive data visualizations.
+            </p>
+            <div class="tech-stack">
+                <span>React.js</span>
+                <span>Node.js</span>
+                <span>PostgreSQL</span>
+                <span>Chart.js</span>
+            </div>
+        </div>
+
+        <div class="project">
+            <h4>Flask Scientific Calculator</h4>
+            <p class="project-date">Personal Project</p>
+            <p>
+                Created an advanced web-based scientific calculator supporting complex mathematical operations, 
+                equation solving, and graphing capabilities with an intuitive and responsive user interface.
+            </p>
+            <div class="tech-stack">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>JavaScript</span>
+                <span>CSS3</span>
+            </div>
+        </div>
+
+        <div class="project">
+            <h4>Real-Time Task Management System</h4>
+            <p class="project-date">Personal Project</p>
+            <p>
+                Developed a collaborative task management platform with real-time updates, team collaboration features, 
+                analytics dashboard, and role-based access control. Implemented WebSocket integration for live updates.
+            </p>
+            <div class="tech-stack">
+                <span>React.js</span>
+                <span>FastAPI</span>
+                <span>PostgreSQL</span>
+                <span>Docker</span>
+                <span>WebSockets</span>
+            </div>
+        </div>
+
+        <div class="project">
+            <h4>Cloud-Based File Storage System</h4>
+            <p class="project-date">Personal Project</p>
+            <p>
+                Architected a secure file storage and sharing platform with user authentication, file encryption, 
+                access control, file versioning, and collaborative editing capabilities. Integrated cloud storage 
+                for scalable file management.
+            </p>
+            <div class="tech-stack">
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>MongoDB</span>
+                <span>Docker</span>
+                <span>AWS S3</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>CERTIFICATIONS</h3>
+        
+        <div class="cert-item">
+            <h4>Python Certification</h4>
+            <p class="cert-date">Deloitte</p>
+            <p>
+                Comprehensive Python programming certification covering advanced concepts, data structures, 
+                object-oriented programming, and real-world application development.
+            </p>
+        </div>
+
+        <div class="cert-item">
+            <h4>AWS Cloud Architecture</h4>
+            <p class="cert-date">Amazon Web Services</p>
+            <p>
+                Professional certification in designing and deploying scalable, highly available, and fault-tolerant 
+                systems on AWS cloud platform. Covered services including EC2, S3, RDS, Lambda, and more.
+            </p>
+        </div>
+
+        <div class="cert-item">
+            <h4>Full Stack Web Development</h4>
+            <p class="cert-date">Udemy</p>
+            <p>
+                Complete full-stack development bootcamp covering frontend technologies (HTML, CSS, JavaScript, React), 
+                backend development (Node.js, Express), databases (SQL & NoSQL), and deployment strategies.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h3>KEY STRENGTHS</h3>
+        <ul>
+            <li>Strong foundation in data structures and algorithms with problem-solving skills</li>
+            <li>Experience in building responsive and interactive user interfaces</li>
+            <li>Proficient in developing RESTful APIs and microservices architecture</li>
+            <li>Expertise in database design, optimization, and management</li>
+            <li>Skilled in version control (Git) and collaborative development practices</li>
+            <li>Quick learner with ability to adapt to new technologies and frameworks</li>
+            <li>Strong debugging and troubleshooting capabilities</li>
+            <li>Excellent communication and documentation skills</li>
+        </ul>
+    </section>
+</body>
+</html>
