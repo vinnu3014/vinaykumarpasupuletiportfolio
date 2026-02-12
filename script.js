@@ -81,10 +81,12 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
     const animateElements = document.querySelectorAll(
-        '.skill-category, .project-card, .cert-card, .stat-item, .about-text'
+        '.skill-category, .project-card, .cert-card, .stat-item, .about-text, .section-title, .contact-info, .contact-form-wrapper'
     );
     
-    animateElements.forEach(el => {
+    animateElements.forEach((el, index) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = `${Math.min(index * 0.08, 0.6)}s`;
         observer.observe(el);
     });
 });
