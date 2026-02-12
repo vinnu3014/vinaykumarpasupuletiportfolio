@@ -215,15 +215,14 @@ body {
 
 .glitch {
     position: relative;
-    animation: glitch-anim 3s infinite;
+    animation: glitch-anim 6s infinite;
 }
 
 @keyframes glitch-anim {
-    0%, 100% { transform: translate(0); }
-    20% { transform: translate(-2px, 2px); }
-    40% { transform: translate(-2px, -2px); }
-    60% { transform: translate(2px, 2px); }
-    80% { transform: translate(2px, -2px); }
+    0%, 92%, 100% { transform: translate(0); }
+    94% { transform: translate(-1px, 1px); }
+    96% { transform: translate(1px, -1px); }
+    98% { transform: translate(-1px, -1px); }
 }
 
 .typing-text {
@@ -942,7 +941,7 @@ section {
 .reveal {
     opacity: 0;
     transform: translateY(18px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.fade-in {

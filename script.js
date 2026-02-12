@@ -170,15 +170,15 @@ function activateNavOnScroll() {
 
 window.addEventListener('scroll', activateNavOnScroll);
 
-// Parallax effect for hero section
+// Subtle parallax effect for hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroText = document.querySelector('.hero-text');
     const heroImage = document.querySelector('.hero-image');
     
     if (heroText && heroImage) {
-        heroText.style.transform = `translateY(${scrolled * 0.4}px)`;
-        heroImage.style.transform = `translateY(${scrolled * 0.2}px)`;
+        heroText.style.transform = `translateY(${scrolled * 0.12}px)`;
+        heroImage.style.transform = `translateY(${scrolled * 0.08}px)`;
     }
 });
 
@@ -217,99 +217,7 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
-// Cursor trail effect (optional - can be removed if not desired)
-const coords = { x: 0, y: 0 };
-const circles = document.querySelectorAll('.circle');
-
-if (circles.length === 0) {
-    // Create cursor trail circles if they don't exist
-    for (let i = 0; i < 20; i++) {
-        const circle = document.createElement('div');
-        circle.classList.add('circle');
-        circle.style.cssText = `
-            position: fixed;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            pointer-events: none;
-            opacity: 0;
-            z-index: 9999;
-            transition: opacity 0.3s;
-        `;
-        document.body.appendChild(circle);
-    }
-}
-
-const allCircles = document.querySelectorAll('.circle');
-let circleCoords = [];
-
-allCircles.forEach((circle, index) => {
-    circleCoords[index] = { x: 0, y: 0 };
-});
-
-globalThis.addEventListener('mousemove', (e) => {
-    coords.x = e.clientX;
-    coords.y = e.clientY;
-    
-    allCircles.forEach((circle, index) => {
-        circle.style.opacity = (20 - index) / 20;
-    });
-});
-
-function animateCircles() {
-    let x = coords.x;
-    let y = coords.y;
-    
-    allCircles.forEach((circle, index) => {
-        circle.style.left = x - 5 + 'px';
-        circle.style.top = y - 5 + 'px';
-        circle.style.transform = `scale(${(20 - index) / 20})`;
-        
-        circleCoords[index].x = x;
-        circleCoords[index].y = y;
-        
-        x += (circleCoords[index + 1]?.x || coords.x) - x;
-        y += (circleCoords[index + 1]?.y || coords.y) - y;
-    });
-    
-    requestAnimationFrame(animateCircles);
-}
-
-animateCircles();
-
-// Easter egg - Konami code
-let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-let konamiIndex = 0;
-
-document.addEventListener('keydown', (e) => {
-    if (e.key === konamiCode[konamiIndex]) {
-        konamiIndex++;
-        if (konamiIndex === konamiCode.length) {
-            activateEasterEgg();
-            konamiIndex = 0;
-        }
-    } else {
-        konamiIndex = 0;
-    }
-});
-
-function activateEasterEgg() {
-    document.body.style.animation = 'rainbow 2s infinite';
-    setTimeout(() => {
-        document.body.style.animation = '';
-    }, 5000);
-}
-
-// Add rainbow animation to CSS
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes rainbow {
-        0% { filter: hue-rotate(0deg); }
-        100% { filter: hue-rotate(360deg); }
-    }
-`;
-document.head.appendChild(style);
+// Professional mode: removed cursor trail and easter egg for cleaner UX
 
 console.log('🚀 Portfolio loaded successfully!');
 console.log('💡 Try the Konami code for a surprise!');
